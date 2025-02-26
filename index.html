@@ -260,41 +260,48 @@
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content has-text-justified">
+      <p>
+        Enabling robots to complete long-term tasks has been a long-standing goal of researchers.
+        However, current methods normally directly employ Large Language Models (LLMs) to robots as
+        a one-step action sequence generator, which may lead to a low success rate during long tasks
+        due to poor performance in long-chain inference, which remains a major bottleneck.
+      </p>
+
+      <p>
+        In this work, we propose <i>STEP</i> (<u>S</u>ubgoal <u>T</u>ree <u>E</u>mbodied <u>P</u>lanner),
+        a long-term embodied planning framework that mitigates the planning gap in temporal and
+        logical dimensions. In the STEP framework, we construct a subgoal tree through a pair of
+        tightly coupled models: the decompose model and the evaluate model. The decompose model
+        leverages a foundation LLM to break down the goal into several subgoals, thereby spanning
+        the subgoal tree. The evaluate model provides real-time feedback based on the environmental
+        state, which determines when to terminate the extension of the subgoal tree.
+      </p>
+
+      <p>
+        By iteratively applying the decompose model and the evaluate model, we obtain a subgoal tree
+        where the leaf nodes represent macro actions that can be directly executed. Within this
+        framework, we develop a hierarchical tree structure ranging from coarse to fine resolutions,
+        where the nodes at each level are directly refined from the nodes of the previous level until
+        leaf nodes that can be directly executed.
+      </p>
+
+      <p>
+        The <i>STEP</i> approach substantially improves the success rate of long task planning by
+        focusing on a single layer of task decomposition. Experiments conducted in Virtualhome
+        watch-and-help (WAH) benchmark and real robot demonstrate that <i>STEP</i> achieves long-term
+        embodied task completion with up to 25% success rates (WAH) and XX% (real robot), outperforming
+        current state-of-the-art methods. Code and videos are available at
+        <a href="https://step-planner.github.io/">our home page</a>.
+      </p>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</div>
+<!--/ Abstract. -->
+
 
     <!-- Paper video. -->
     <!--
