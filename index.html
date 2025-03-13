@@ -199,6 +199,51 @@
 
   
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content has-text-justified">
+      <p>
+        The ability to perform reliable long-horizon task planning is crucial for deploying robots in real-world environments. 
+        However, directly employing Large Language Models (LLMs) 
+        as action sequence generators often results in low success rates due to their limited reasoning ability for long-horizon embodied tasks.
+      </p>
+
+      <p>
+        In the STEP framework, we construct a subgoal tree through a pair of closed-loop models: a subgoal decomposition model and a leaf node termination model. 
+        Within this framework, we develop a hierarchical tree structure that spans from coarse to fine resolutions. 
+        The subgoal decomposition model leverages a foundation LLM to break down complex goals into manageable subgoals, thereby spanning the subgoal tree. 
+        The leaf node termination model provides real-time feedback based on environmental states, 
+        determining when to terminate the tree spanning and ensuring each leaf node can be directly converted into a primitive action.
+      </p>
+
+      <p>
+        Experiments conducted in both the VirtualHome WAH-NL benchmark and on real robots demonstrate that STEP achieves 
+        long-horizon embodied task completion with success rates up to 34\% (WAH-NL) and 25\% (real robot) outperforming SOTA methods. 
+      </p>
+    </div>
+  </div>
+</div>
+<!--/ Abstract. -->
+
+
+    <!-- Paper video. -->
+    <!--
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</section>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -251,79 +296,13 @@
     </div>
   </div>
 </section>
-
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3">Abstract</h2>
-    <div class="content has-text-justified">
-      <p>
-        Enabling robots to complete long-term tasks has been a long-standing goal of researchers.
-        However, current methods normally directly employ Large Language Models (LLMs) to robots as
-        a one-step action sequence generator, which may lead to a low success rate during long tasks
-        due to poor performance in long-chain inference, which remains a major bottleneck.
-      </p>
-
-      <p>
-        In this work, we propose <i>STEP</i> (<u>S</u>ubgoal <u>T</u>ree <u>E</u>mbodied <u>P</u>lanner),
-        a long-term embodied planning framework that mitigates the planning gap in temporal and
-        logical dimensions. In the STEP framework, we construct a subgoal tree through a pair of
-        tightly coupled models: the decompose model and the evaluate model. The decompose model
-        leverages a foundation LLM to break down the goal into several subgoals, thereby spanning
-        the subgoal tree. The evaluate model provides real-time feedback based on the environmental
-        state, which determines when to terminate the extension of the subgoal tree.
-      </p>
-
-      <p>
-        By iteratively applying the decompose model and the evaluate model, we obtain a subgoal tree
-        where the leaf nodes represent macro actions that can be directly executed. Within this
-        framework, we develop a hierarchical tree structure ranging from coarse to fine resolutions,
-        where the nodes at each level are directly refined from the nodes of the previous level until
-        leaf nodes that can be directly executed.
-      </p>
-
-      <p>
-        The <i>STEP</i> approach substantially improves the success rate of long task planning by
-        focusing on a single layer of task decomposition. Experiments conducted in Virtualhome
-        watch-and-help (WAH) benchmark and real robot demonstrate that <i>STEP</i> achieves long-term
-        embodied task completion with up to 25% success rates (WAH) and XX% (real robot), outperforming
-        current state-of-the-art methods. Code and videos are available at
-        <a href="https://step-planner.github.io/">our home page</a>.
-      </p>
-    </div>
-  </div>
-</div>
-<!--/ Abstract. -->
-
-
-    <!-- Paper video. -->
-    <!--
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    -->
-  </div>
-</section>
-
-
+  
+<!--
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
-      <!--
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
@@ -337,11 +316,7 @@
           </video>
         </div>
       </div>
-      -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!--
+ 
       <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
@@ -359,11 +334,8 @@
         </div>
       </div>
     </div>
-      -->
-    <!--/ Matting. -->
 
-    <!-- Animation. -->
-      <!--
+  
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
@@ -423,11 +395,8 @@
 
       </div>
     </div>
-  -->
-    <!--/ Animation. -->
+  
 
-
-    <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
@@ -452,12 +421,12 @@
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+
 
   </div>
 </section>
-
-
+-->
+<!--
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -469,6 +438,7 @@
 }</code></pre>
   </div>
 </section>
+  -->
 
 
 <footer class="footer">
